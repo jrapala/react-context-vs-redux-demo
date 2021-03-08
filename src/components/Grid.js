@@ -62,15 +62,13 @@ const Grid = ({
         </div>
       </form>
       <div className="grid">
-        <div style={{ width: columns * 40 }}>
-          {Array.from({ length: rows }).map((r, row) => (
-            <div key={row} className="row">
-              {Array.from({ length: columns }).map((c, column) => (
-                <Cell key={column} row={row} column={column} />
-              ))}
-            </div>
-          ))}
-        </div>
+        {Array.from({ length: rows }).map((r, row) => (
+          <div key={row} className="row">
+            {Array.from({ length: columns }).map((c, column) => (
+              <Cell key={column} row={row} column={column} />
+            ))}
+          </div>
+        ))}
       </div>
     </div>
   );
