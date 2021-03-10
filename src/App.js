@@ -1,11 +1,14 @@
 import './App.css';
+import AppProvider from './AppProvider';
 import AppGrid from './components/AppGrid';
 
 function App() {
   return (
-    <div className="app">
-      <AppGrid />
-    </div>
+    <AppProvider>
+      <div className="app">
+        <AppGrid />
+      </div>
+    </AppProvider>
   );
 }
 
